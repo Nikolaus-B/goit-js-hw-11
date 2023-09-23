@@ -4,6 +4,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const form = document.querySelector('.c-form');
+const input = document.querySelector('.c-form__input');
 const gallery = document.querySelector('.gallery');
 
 let page = 1;
@@ -53,9 +54,10 @@ function createGallery(images) {
 form.addEventListener('submit', onSubmitClick);
 
 function onSubmitClick(e) {
+  console.log(input.value);
   e.preventDefault();
   page = 1;
-  e.currentTarget.elements.searchQuery.value.trim();
+  query = input.value;
   gallery.innerHTML = '';
 
   if (query === '') {
