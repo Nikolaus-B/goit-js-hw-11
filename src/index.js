@@ -88,6 +88,8 @@ function onSubmitClick(e) {
     });
 }
 
+window.addEventListener('scroll', showMorePage);
+
 function onloadMore() {
   page += 1;
   simpleLightBox.destroy();
@@ -111,17 +113,11 @@ function onloadMore() {
     .catch(error => console.log(error));
 }
 
-function checkIfEndOfPage() {
-  return (
+function showMorePage() {
+  if (
     window.innerHeight + window.pageYOffset >=
     document.documentElement.scrollHeight
-  );
-}
-
-function showMorePage() {
-  if (checkIfEndOfPage()) {
+  ) {
     onloadMore();
   }
 }
-
-window.addEventListener('scroll', showMorePage);
