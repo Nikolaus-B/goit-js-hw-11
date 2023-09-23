@@ -25,7 +25,7 @@ body {
     }
 
     .c-form__input,
-    .c-form__buttonLabel {
+    .c-form__button {
       transition: 0.2s 0.1s;
       visibility: visible;
       opacity: 1;
@@ -91,7 +91,7 @@ body {
 }
 
 .c-form__input,
-.c-form__buttonLabel {
+.c-form__button {
   font-size: 1.75em;
   opacity: 0;
   visibility: hidden;
@@ -118,7 +118,7 @@ body {
   }
 }
 
-.c-form__buttonLabel {
+.c-form__button {
   color: #ffaea9;
   height: 100%;
   width: auto;

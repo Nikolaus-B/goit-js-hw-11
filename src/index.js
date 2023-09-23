@@ -92,7 +92,10 @@ function onloadMore() {
   search(query, page)
     .then(data => {
       createGallery(data.hits);
-      simpleLightBox = new SimpleLightbox('.gallery a');
+      simpleLightBox = new SimpleLightbox('.gallery a', {
+        captionsData: 'alt',
+        captionDelay: 250,
+      });
 
       const totalPages = Math.ceil(data.totalHits / 40);
 
