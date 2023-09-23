@@ -7,6 +7,7 @@ const form = document.querySelector('.c-form');
 const gallery = document.querySelector('.gallery');
 
 let page = 1;
+let query = '';
 
 function createGallery(images) {
   const markup = images
