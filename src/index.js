@@ -9,6 +9,7 @@ const gallery = document.querySelector('.gallery');
 
 let page = 1;
 let query = '';
+let simpleLightBox;
 
 function createGallery(images) {
   const markup = images
@@ -54,7 +55,6 @@ function createGallery(images) {
 form.addEventListener('submit', onSubmitClick);
 
 function onSubmitClick(e) {
-  console.log(input.value);
   e.preventDefault();
   page = 1;
   query = input.value;
