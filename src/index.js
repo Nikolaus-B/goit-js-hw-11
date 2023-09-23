@@ -55,7 +55,7 @@ form.addEventListener('submit', onSubmitClick);
 function onSubmitClick(e) {
   e.preventDefault();
   page = 1;
-  query = form[0].value;
+  e.currentTarget.elements.searchQuery.value.trim();
   gallery.innerHTML = '';
 
   if (query === '') {
